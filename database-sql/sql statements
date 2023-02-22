@@ -1,0 +1,19 @@
+CREATE DATABASE `html_tip_db` ;
+
+
+CREATE TABLE `html_tip_db`.`tbl_admin` (
+  `admin_id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`admin_id`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `html_tip_db`.`tbl_tip` (
+  `tip_id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) DEFAULT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `exampleHtmlEscape` varchar(900) DEFAULT NULL,
+  PRIMARY KEY (`tip_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
